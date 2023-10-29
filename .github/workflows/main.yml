@@ -1,0 +1,9 @@
+name: First Work Flow Script
+on:
+  workflow_dispatch:
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first setp
+        run: echo heys
