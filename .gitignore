@@ -1,5 +1,5 @@
 .python-version
 
-app.python
+app.py
 __pycache__
 migrations
