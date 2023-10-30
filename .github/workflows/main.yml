@@ -2,10 +2,10 @@ name: First Work Flow Script
 on:
   workflow_dispatch:
 jobs:
-  job1:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: get code
         uses: actions/checkout@v4
-      - name: build requimrents
-        run: pip install django
+      - name: build
+        run: docker-compose build
