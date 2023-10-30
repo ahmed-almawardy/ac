@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: get code
         uses: actions/checkout@v4
+      - name: build requimrents
+        run: pip install django
       - name: run server
         run: python manage.py runserver 0.0.0.0:8080
-
-        
