@@ -2,8 +2,12 @@ name: First Work Flow Script
 on:
   workflow_dispatch:
 jobs:
-  print:
+  runServer:
     runs-on: ubuntu-latest
     steps:
-      - name: first setp
-        run: echo heys
+      - name: get code
+        uses: actions/checkout@v4
+      - name: run server
+        run: python manage.py runserver 0.0.0.0:8080
+
+        
