@@ -2,10 +2,19 @@ name: First Work Flow Script
 on:
   workflow_dispatch:
 jobs:
-  build:
+  build-backend:
     runs-on: ubuntu-latest
     steps:
       - name: get code
         uses: actions/checkout@v4
       - name: build
-        run: docker-compose build
+        run: docker-compose build app
+  build-frontend:
+    runs-on: ubuntu-latest
+    needs: build-backend
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
+      - name: build
+        run: docker-compose build frontendapp
+      

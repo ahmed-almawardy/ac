@@ -1,4 +1,6 @@
 .python-version
+.vscode
+
 
 app.py
 __pycache__
