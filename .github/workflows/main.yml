@@ -2,12 +2,10 @@ name: First Work Flow Script
 on:
   workflow_dispatch:
 jobs:
-  runServer:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - name: get code
         uses: actions/checkout@v4
       - name: build requimrents
         run: pip install django
-      - name: run server
-        run: python manage.py runserver 0.0.0.0:8080
